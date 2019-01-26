@@ -1,5 +1,8 @@
 package com.nbafantasy.rankings.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -8,16 +11,11 @@ import java.util.List;
 
 @XmlRootElement(name = "FantasyBasketballNerd")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class FantasyBasketballNerd {
+@Getter
+@Setter
+public class FantasyBasketballRanking {
 
     @XmlElement(name = "Player")
-    private List<Player> playerList;
+    private List<Player> players;
 
-    public List<Player> getPlayerList() {
-        return playerList;
-    }
-
-    public void setPlayerList(List<Player> playerList) {
-        this.playerList = playerList;
-    }
 }

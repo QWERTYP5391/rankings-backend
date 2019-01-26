@@ -1,12 +1,13 @@
 package com.nbafantasy.rankings.service;
 
-import com.nbafantasy.rankings.model.FantasyBasketballNerd;
+import com.nbafantasy.rankings.model.FantasyBasketballRanking;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.PostConstruct;
 
 @Service
 public class PlayerService {
@@ -15,17 +16,24 @@ public class PlayerService {
     private RestTemplate restTemplate;
 
     @Getter
-    @Setter
     @Value("${fantasy.api.url}")
     private String apiUrl;
+
+
+    @Getter
+    private FantasyBasketballRanking fantasyBasketballRanking;
 
     @Autowired
     PlayerService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
+    @PostConstruct
     public void loadPlayers(){
-        FantasyBasketballNerd value = restTemplate.getForObject(apiUrl, FantasyBasketballNerd.class);
+        fantasyBasketballRanking= restTemplate.getForObject(apiUrl, FantasyBasketballRanking.class);
     }
+
+
+
 
 }
