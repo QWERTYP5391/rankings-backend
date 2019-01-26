@@ -2,9 +2,6 @@ package com.nbafantasy.rankings.service;
 
 import com.nbafantasy.rankings.TestUtility;
 import com.nbafantasy.rankings.model.FantasyBasketballRanking;
-import com.nbafantasy.rankings.model.Player;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

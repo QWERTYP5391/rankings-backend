@@ -3,7 +3,6 @@ package com.nbafantasy.rankings.controller;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nbafantasy.rankings.TestUtility;
-import com.nbafantasy.rankings.model.FantasyBasketballRanking;
 import com.nbafantasy.rankings.model.Player;
 import com.nbafantasy.rankings.service.PlayerService;
 import org.junit.Test;
