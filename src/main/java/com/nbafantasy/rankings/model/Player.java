@@ -1,23 +1,7 @@
 package com.nbafantasy.rankings.model;
-/*
-<Player>
-<playerId>525</playerId>
-<position>C</position>
-<rankPos>1</rankPos>
-<rankOverall>1</rankOverall>
-<name>Anthony Davis</name>
-<team>NOP</team>
-<standDev>0.829</standDev>
-</Player>
- */
 
-import lombok.Builder;
 
-import javax.persistence.Entity;
-
-@Builder
-@Entity
-public class Player implements Comparable<Player> {
+public class Player {
 
     private Integer playerId;
 
@@ -89,8 +73,4 @@ public class Player implements Comparable<Player> {
         this.standDev = standDev;
     }
 
-    @Override
-    public int compareTo(Player o) {
-        return o.getRankOverall() - this.getRankOverall();
-    }
 }
