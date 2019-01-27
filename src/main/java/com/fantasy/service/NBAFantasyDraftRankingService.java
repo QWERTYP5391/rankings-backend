@@ -1,6 +1,6 @@
-package com.nbafantasy.rankings.service;
+package com.fantasy.service;
 
-import com.nbafantasy.rankings.model.NBAFantasyDraftRanking;
+import com.fantasy.model.NBAFantasyDraftRanking;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

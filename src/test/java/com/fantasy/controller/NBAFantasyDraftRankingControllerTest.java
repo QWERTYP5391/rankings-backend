@@ -1,10 +1,9 @@
-package com.nbafantasy.rankings.controller;
+package com.fantasy.controller;
 
+import com.fantasy.TestUtility;
+import com.fantasy.model.Player;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nbafantasy.rankings.TestUtility;
-import com.nbafantasy.rankings.model.Player;
-import com.nbafantasy.rankings.service.NBAFantasyDraftRankingService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ public class NBAFantasyDraftRankingControllerTest {
     MockMvc mockMvc;
 
     @MockBean
-    NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
+    com.fantasy.service.NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
 
     @Autowired
     private ObjectMapper objectMapper;

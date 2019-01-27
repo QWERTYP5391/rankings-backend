@@ -1,4 +1,4 @@
-package com.nbafantasy.rankings.service;
+package com.fantasy.service;
 
 public interface PlayerService {
 

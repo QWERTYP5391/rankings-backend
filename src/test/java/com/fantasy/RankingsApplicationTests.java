@@ -1,4 +1,4 @@
-package com.nbafantasy.rankings;
+package com.fantasy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

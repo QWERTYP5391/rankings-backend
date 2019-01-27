@@ -1,4 +1,4 @@
-package com.nbafantasy.rankings.config;
+package com.fantasy.config;
 
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustStrategy;

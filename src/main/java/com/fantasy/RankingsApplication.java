@@ -1,4 +1,4 @@
-package com.nbafantasy.rankings;
+package com.fantasy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

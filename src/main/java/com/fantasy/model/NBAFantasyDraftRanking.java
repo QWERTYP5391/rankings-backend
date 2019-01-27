@@ -1,4 +1,4 @@
-package com.nbafantasy.rankings.model;
+package com.fantasy.model;
 
 import lombok.Getter;
 import lombok.Setter;

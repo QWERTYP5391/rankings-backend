@@ -1,7 +1,7 @@
-package com.nbafantasy.rankings.service;
+package com.fantasy.service;
 
-import com.nbafantasy.rankings.TestUtility;
-import com.nbafantasy.rankings.model.NBAFantasyDraftRanking;
+import com.fantasy.TestUtility;
+import com.fantasy.model.NBAFantasyDraftRanking;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

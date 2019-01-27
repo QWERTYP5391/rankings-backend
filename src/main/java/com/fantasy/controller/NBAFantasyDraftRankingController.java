@@ -1,7 +1,7 @@
-package com.nbafantasy.rankings.controller;
+package com.fantasy.controller;
 
-import com.nbafantasy.rankings.model.Player;
-import com.nbafantasy.rankings.service.NBAFantasyDraftRankingService;
+import com.fantasy.model.Player;
+import com.fantasy.service.NBAFantasyDraftRankingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,7 +19,7 @@ public class NBAFantasyDraftRankingController {
     protected static final String PATH = "/players";
     protected static final String RANKINGS_PATH = "/rankings";
 
-    private NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
+    private com.fantasy.service.NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
 
     @Autowired
     NBAFantasyDraftRankingController(NBAFantasyDraftRankingService NBAFantasyDraftRankingService) {

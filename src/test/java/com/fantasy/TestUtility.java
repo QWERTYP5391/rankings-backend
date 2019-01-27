@@ -1,7 +1,7 @@
-package com.nbafantasy.rankings;
+package com.fantasy;
 
-import com.nbafantasy.rankings.model.NBAFantasyDraftRanking;
-import com.nbafantasy.rankings.model.Player;
+import com.fantasy.model.NBAFantasyDraftRanking;
+import com.fantasy.model.Player;
 
 import java.util.ArrayList;
 import java.util.List;
