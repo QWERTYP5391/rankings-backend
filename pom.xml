@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nbafantasy</groupId>
-    <artifactId>rankings</artifactId>
+    <artifactId>rankings-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rankings</name>
+    <name>rankings-backend</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

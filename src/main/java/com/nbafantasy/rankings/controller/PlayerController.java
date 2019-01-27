@@ -16,8 +16,8 @@ import java.util.List;
 @RequestMapping(PlayerController.PATH)
 public class PlayerController {
 
-    public static final String PATH = "/players";
-    public static final String RANKINGS_PATH = "/rankings";
+    protected static final String PATH = "/players";
+    protected static final String RANKINGS_PATH = "/rankings";
 
     private PlayerService playerService;
 
