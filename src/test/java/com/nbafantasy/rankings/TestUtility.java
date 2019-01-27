@@ -1,6 +1,6 @@
 package com.nbafantasy.rankings;
 
-import com.nbafantasy.rankings.model.FantasyBasketballRanking;
+import com.nbafantasy.rankings.model.NBAFantasyDraftRanking;
 import com.nbafantasy.rankings.model.Player;
 
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import java.util.List;
 
 public class TestUtility {
 
-    public static FantasyBasketballRanking getFantasyBasketBallRanking() {
+    public static NBAFantasyDraftRanking getFantasyBasketBallRanking() {
 
 
-        FantasyBasketballRanking rankings = new FantasyBasketballRanking();
+        NBAFantasyDraftRanking rankings = new NBAFantasyDraftRanking();
         List<Player> players = new ArrayList<>();
 
         Player samplePLayer = new Player();

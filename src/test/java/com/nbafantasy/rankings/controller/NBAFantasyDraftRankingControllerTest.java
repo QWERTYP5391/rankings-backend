@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nbafantasy.rankings.TestUtility;
 import com.nbafantasy.rankings.model.Player;
-import com.nbafantasy.rankings.service.PlayerService;
+import com.nbafantasy.rankings.service.NBAFantasyDraftRankingService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ import static org.mockito.Mockito.when;
 @AutoConfigureMockMvc
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class PlayerControllerTest {
+public class NBAFantasyDraftRankingControllerTest {
 
     private static final int SIZE = 1;
 
@@ -35,15 +35,15 @@ public class PlayerControllerTest {
     MockMvc mockMvc;
 
     @MockBean
-    PlayerService playerService;
+    NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
 
     @Autowired
     private ObjectMapper objectMapper;
 
     @Test
     public void getPlayerRankings() throws Exception {
-        when(playerService.getFantasyBasketballRanking()).thenReturn(TestUtility.getFantasyBasketBallRanking());
-        ResultActions actions = mockMvc.perform(get(PlayerController.PATH + PlayerController.RANKINGS_PATH));
+        when(NBAFantasyDraftRankingService.getNBAFantasyDraftRanking()).thenReturn(TestUtility.getFantasyBasketBallRanking());
+        ResultActions actions = mockMvc.perform(get(NBAFantasyDraftRankingController.PATH + NBAFantasyDraftRankingController.RANKINGS_PATH));
         actions.andExpect(status().isOk());
 
         MvcResult result = actions.andReturn();

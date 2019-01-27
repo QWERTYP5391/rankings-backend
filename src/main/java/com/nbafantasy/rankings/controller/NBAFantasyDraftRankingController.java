@@ -1,7 +1,7 @@
 package com.nbafantasy.rankings.controller;
 
 import com.nbafantasy.rankings.model.Player;
-import com.nbafantasy.rankings.service.PlayerService;
+import com.nbafantasy.rankings.service.NBAFantasyDraftRankingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,22 +13,22 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping(PlayerController.PATH)
-public class PlayerController {
+@RequestMapping(NBAFantasyDraftRankingController.PATH)
+public class NBAFantasyDraftRankingController {
 
     protected static final String PATH = "/players";
     protected static final String RANKINGS_PATH = "/rankings";
 
-    private PlayerService playerService;
+    private NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
 
     @Autowired
-    PlayerController(PlayerService playerService) {
-        this.playerService = playerService;
+    NBAFantasyDraftRankingController(NBAFantasyDraftRankingService NBAFantasyDraftRankingService) {
+        this.NBAFantasyDraftRankingService = NBAFantasyDraftRankingService;
     }
 
     @GetMapping(RANKINGS_PATH)
     public ResponseEntity<List<Player>> getPlayerRankings() {
-        return ResponseEntity.ok(playerService.getFantasyBasketballRanking().getPlayers());
+        return ResponseEntity.ok(NBAFantasyDraftRankingService.getNBAFantasyDraftRanking().getPlayers());
     }
 
 }

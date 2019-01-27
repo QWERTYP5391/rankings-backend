@@ -1,7 +1,7 @@
 package com.nbafantasy.rankings.service;
 
 import com.nbafantasy.rankings.TestUtility;
-import com.nbafantasy.rankings.model.FantasyBasketballRanking;
+import com.nbafantasy.rankings.model.NBAFantasyDraftRanking;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +17,10 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class PlayerServiceTest {
+public class NBAFantasyDraftRankingServiceTest {
 
     @Autowired
-    private PlayerService playerService;
+    private NBAFantasyDraftRankingService NBAFantasyDraftRankingService;
 
     @MockBean
     private RestTemplate restTemplate;
@@ -29,12 +29,12 @@ public class PlayerServiceTest {
     @Test
     public void loadPlayers() {
 
-        FantasyBasketballRanking fantasyBasketBallRanking = TestUtility.getFantasyBasketBallRanking();
-        when(restTemplate.getForObject(playerService.getApiUrl(), FantasyBasketballRanking.class)).thenReturn(fantasyBasketBallRanking);
+        NBAFantasyDraftRanking NBAFantasyBasketBallRanking = TestUtility.getFantasyBasketBallRanking();
+        when(restTemplate.getForObject(NBAFantasyDraftRankingService.getApiUrl(), NBAFantasyDraftRanking.class)).thenReturn(NBAFantasyBasketBallRanking);
 
-        playerService.loadPlayers();
+        NBAFantasyDraftRankingService.loadPlayers();
 
-        assertThat(playerService.getFantasyBasketballRanking(), equalTo(fantasyBasketBallRanking));
+        assertThat(NBAFantasyDraftRankingService.getNBAFantasyDraftRanking(), equalTo(NBAFantasyBasketBallRanking));
     }
 
 

@@ -13,7 +13,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
-public class FantasyBasketballRanking {
+public class NBAFantasyDraftRanking {
 
     @XmlElement(name = "Player")
     private List<Player> players;
